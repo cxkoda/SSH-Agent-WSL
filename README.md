@@ -18,3 +18,9 @@ else
     export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name "agent.*")
 fi
 ```
+
+Configure `~/.ssh/config` if you want your keys to be automatically added to the agent, e.g.
+```
+IdentityFile ~/.ssh/id_rsa
+AddKeysToAgent yes
+```
