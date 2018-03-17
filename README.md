@@ -19,8 +19,9 @@ else
 fi
 ```
 
-Configure `~/.ssh/config` if you want your keys to be automatically added to the agent, e.g.
+Ssh needs still to be configured if you want your keys to be automatically added.  
+To do so add the following line to `~/.ssh/config`
 ```
-IdentityFile ~/.ssh/id_rsa
 AddKeysToAgent yes
 ```
+If you are creating a new config file make sure to set the right permissions, i.e. `chmod 600 ~/.ssh/config`
