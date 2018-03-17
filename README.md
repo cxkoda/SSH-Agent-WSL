@@ -1,6 +1,6 @@
 # SSH-Agent-WSL
 
-The ssh-agent is not launched automatically in the WSL.
+The ssh-agent is not launched automatically in the WSL.  
 Add these lines to `~/.bashrc` to fix that.
 
 ```
@@ -17,8 +17,4 @@ else
     export SSH_AGENT_PID=$(pgrep ssh-agent)
     export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name "agent.*")
 fi
-
-#if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
-#    ssh-add
-#fi
 ```
